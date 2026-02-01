@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Photography, programming, and other personal projects.">
+    <meta charset="UTF-8">
+
+    <style>
+    html {
+        color: rgb(51, 51, 46);
+        font-family: "monospace";
+        font-size: 1rem;
+    }
+
+    p {
+        max-width: 70ch;
+    }
+
+    pre {
+        font-size: 0.7rem;
+    }
+
+    #links {
+        line-height: 1.5;
+    }
+
+    #links a {
+        color: #2525d8; 
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+    table td {
+        padding: 0px 0.4em;
+        min-width: 20ch;
+    }
+
+
+    @media (max-width: 600px) {
+        html {
+            font-size: 1rem;
+        }
+        pre {
+            font-size: 2.6vw
+        }
+        #links {
+            line-height: 1.6;
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -20,22 +67,52 @@
                        |/                              
     </pre>
 
-    <p>Welcome to my homepage!</p>
+    <p>
+    I’m a math undergraduate and hobbyist programmer with a growing interest in numerical methods and scientific computing. I enjoy exploring how mathematical ideas translate into efficient low-level code.
+    </p>
 
-    <div id="links">
+    <p><b>projects & hobbys</b></p>
 
-        <ul>
-            <li>
+    <table>
+        <tr>
+            <td>
+                <a href="/synth">synth</a>
+            </td>
+            <td>a modular synthesizer project to learn C</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/mandelbrot">mandelbrot zoom</a>
+            </td>
+            <td>a simple mandelbrot zoom generator</td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <a href="/solvers">solvers</a>
+            </td>
+            <td>exercises in implementing numerical solvers</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/boring">boring</a>
+            </td>
+            <td>a firefox extension to remove distractions on youtube and reddit</td>
+        </tr>
+
+        <tr>
+            <td>
                 <a href="/photography">photography</a>
-            </li>
+            </td>
+            <td>some of my favourite photos</td>
+        </tr>
 
-            <!--
-            <li>
-                <a href="/programming">programming</a>
-            </li>
-            -->
+    </table>
 
-        </ul>
-    </div>
+
+    <p><b>feedback & suggestions are welcome</b></p>
+    <p>damianhsimon@gmail.com</p>
+
 </body>
 </html> 
