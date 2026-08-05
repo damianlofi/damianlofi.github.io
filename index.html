@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <title>Damian</title>
-    <link rel="preload" href="/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/EBGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/EBGaramond-Regular-subset.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Photography, programming, and other personal projects.">
     <meta charset="UTF-8">
@@ -11,15 +10,19 @@
     <style>
     @font-face {
         font-family: "EBGaramond";
-        src: url("/fonts/EBGaramond-Regular.woff2") format("woff2"),
-           url("/fonts/EBGaramond-Regular.woff") format("woff");
+        src: url("/fonts/EBGaramond-Regular-subset.woff2") format("woff2");
         font-weight: 400;
         font-style: normal;
-        font-display: swap;
+        font-display: auto;
     }
+
+    html.font-loading body {
+        visibility: hidden;
+    }
+    
     body {
-        font-family: "EBGaramond", monospace;
-        font-size: 1.12rem;
+        font-family: "EBGaramond", Georgia, serif;
+        font-size: 1.15rem;
     }
 
     p {
@@ -33,14 +36,22 @@
     }
 
     </style>
+
+    <!-- prevents body from being rendered before font loading to prevent flash of unstyled text-->
+    <script>
+        document.documentElement.classList.add("font-loading");
+
+        const showPage = () => {
+            document.documentElement.classList.remove("font-loading");
+        };
+
+        document.fonts
+            .load('1em "EBGaramond"')
+            .then(showPage, showPage);
+    </script>
 </head>
 
 <body>
-
-    <div class="font_preload" style="opacity: 0">
-        <span style="font-family: 'EBGaramond-Regular', Arial, sans-serif;"></span>
-    </div>
-
     <p>
         Hello, world! <br>I'm a math undergraduate and programmer with a growing interest in scientific computing. Feedback or suggestions are always welcome at <a href="mailto:damianhsimon@gmail.com">damianhsimon@gmail.com</a>. 
 
