@@ -13,7 +13,7 @@
         src: url("/fonts/EBGaramond-Regular-subset.woff2") format("woff2");
         font-weight: 400;
         font-style: normal;
-        font-display: auto;
+        font-display: swap;
     }
 
     html.font-loading body {
@@ -45,9 +45,17 @@
             document.documentElement.classList.remove("font-loading");
         };
 
-        document.fonts
-            .load('1em "EBGaramond"')
-            .then(showPage, showPage);
+        if ("fonts" in document) {
+            document.fonts
+                .load('1em "EBGaramond"')
+                .then(showPage, showPage);
+
+            // Never leave the page hidden indefinitely.
+            setTimeout(showPage, 10000);
+        } else {
+            showPage();
+        }
+
     </script>
 </head>
 
@@ -56,9 +64,9 @@
         Hello, world! <br>I'm a math undergraduate and programmer with a growing interest in scientific computing. Feedback or suggestions are always welcome at <a href="mailto:damianhsimon@gmail.com">damianhsimon@gmail.com</a>. 
 
 
-    <p> 
-    [ <a href="/cv.pdf">curriculum vitae</a> ] <br>
-    [ <a href="https://github.com/damianlofi">github</a> ] <br>
+    <p style="line-height: 1.5"> 
+    <a href="/cv.pdf">curriculum vitae</a><br>
+    <a href="https://github.com/damianlofi">github</a><br>
     </p>
 
 </body>
