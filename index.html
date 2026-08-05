@@ -22,17 +22,13 @@
     
     body {
         font-family: "EBGaramond", Georgia, serif;
-        font-size: 1.15rem;
+        font-size: 1.22rem;
     }
 
     p {
         max-width: 75ch;
         hyphens: auto;
         overflow-wrap: break-word;
-    }
-
-    h2 {
-        font-size: 1.12rem;
     }
 
     </style>
@@ -51,7 +47,7 @@
                 .then(showPage, showPage);
 
             // Never leave the page hidden indefinitely.
-            setTimeout(showPage, 10000);
+            setTimeout(showPage, 5000);
         } else {
             showPage();
         }
