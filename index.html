@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <title>Damian</title>
+    <link rel="preload" href="/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/EBGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Photography, programming, and other personal projects.">
     <meta charset="UTF-8">
-    <link rel="preload" href="/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/EBGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
 
     <style>
     @font-face {
@@ -32,21 +32,14 @@
         font-size: 1.12rem;
     }
 
-    pre {
-        font-family: monospace;
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 600px) {
-        pre {
-            font-size: 2.6vw
-        }
-    }
     </style>
 </head>
 
 <body>
+
+    <div class="font_preload" style="opacity: 0">
+        <span style="font-family: 'EBGaramond-Regular', Arial, sans-serif;"></span>
+    </div>
 
     <p>
         Hello, world! <br>I'm a math undergraduate and programmer with a growing interest in scientific computing. Feedback or suggestions are always welcome at <a href="mailto:damianhsimon@gmail.com">damianhsimon@gmail.com</a>. 
