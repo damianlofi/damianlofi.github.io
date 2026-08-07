@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="font-loading" lang="en">
 <head>
-    <title>Damian</title>
+    <title>Damian Simon</title>
     <link rel="preload" href="/fonts/computermodern/CMUSerif-Roman.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- <link rel="preload" href="/fonts/mlmodern/mlmr12.woff2" as="font" type="font/woff2" crossorigin> -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Photography, programming, and other personal projects.">
     <meta charset="UTF-8">
@@ -26,7 +24,7 @@
     body {
         font-family: "Computer Modern", serif;
         line-height: 1.3;
-        font-size: 1.05rem;
+        font-size: 1.0625rem;
     }
 
     p {
@@ -36,11 +34,8 @@
     }
 
     </style>
-
     <!-- prevents body from being rendered before font loading to prevent flash of unstyled text-->
     <script>
-        document.documentElement.classList.add("font-loading");
-
         const showPage = () => {
             document.documentElement.classList.remove("font-loading");
         };
