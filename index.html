@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <title>Damian</title>
-    <link rel="preload" href="/fonts/lmroman12-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/computermodern/CMUSerif-Roman.woff2" as="font" type="font/woff2" crossorigin>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Photography, programming, and other personal projects.">
     <meta charset="UTF-8">
 
+
     <style>
     @font-face {
-        font-family: "lmroman12-regular";
-        src: url("/fonts/lmroman12-regular.woff2") format("woff2");
+        font-family: "Computer Modern Serif";
+        src: url("/fonts/computermodern/CMUSerif-Roman.woff2") format("woff2");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
@@ -21,9 +23,9 @@
     }
     
     body {
-        font-family: "lmroman12-regular", serif;
+        font-family: "Computer Modern Serif", serif;
         font-size: 1.12rem;
-        line-height: 1.3;
+        line-height: 1.35;
     }
 
     p {
@@ -44,7 +46,7 @@
 
         if ("fonts" in document) {
             document.fonts
-                .load('1em "Newsreader_24pt-Regular"')
+                .load('1em "Computer Modern Serif"')
                 .then(showPage, showPage);
 
             // Never leave the page hidden indefinitely.
