@@ -11,12 +11,15 @@
     .photo {
         width: 38em;
         max-width: 100%;
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 3/2;
         object-fit: cover;
         object-position: center;
         background-color: aliceblue;
         margin-bottom: 8px;
         display: block;
+    }
+    .lower-aspect-ratio {
+        aspect-ratio: 4/3;
     }
     </style>
 </head>
@@ -74,7 +77,7 @@
         <img class="photo" loading="lazy" src="/photography/images/tree.avif" alt="">
         <img class="photo" loading="lazy" src="/photography/images/leafes.avif" alt="">
         <img class="photo" loading="lazy" src="/photography/images/trees2.avif" alt="">
-        <img class="photo" loading="lazy" src="/photography/images/IMG_0093.avif" alt="">
+        <img class="photo lower-aspect-ratio" loading="lazy" src="/photography/images/IMG_0093.avif" alt="">
     </div>
 </body>
 </html>
